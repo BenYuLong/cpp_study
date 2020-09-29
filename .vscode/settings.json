@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.log.*": "log",
+        "vector": "cpp",
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "regex": "cpp"
+    },
+    "cmake.configureOnOpen": true
+}
