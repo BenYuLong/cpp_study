@@ -23,8 +23,10 @@
 
 
 #define LOG_T(prefix, module, level, ...) \
-    if (level < LOG_LEVEL)        \
-    printf(prefix module " : " __VA_ARGS__)
+    if (level < LOG_LEVEL) {       \
+        printf(prefix module " : " __VA_ARGS__); \
+        printf("\n");  \
+    }
 
 #define FATAL(module, ...) LOG_T(RED("[fatal]   "), module, 0, __VA_ARGS__)
 #define ERROR(module, ...) LOG_T(RED("[error]   "), module, 1, __VA_ARGS__)
