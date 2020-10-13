@@ -28,11 +28,11 @@
         printf("\n");  \
     }
 
-#define FATAL(module, ...) LOG_T(RED("[fatal]   "), module, 0, __VA_ARGS__)
-#define ERROR(module, ...) LOG_T(RED("[error]   "), module, 1, __VA_ARGS__)
-#define WARN(module, ...) LOG_T(YELLOW("[warning] "), module, 2, __VA_ARGS__)
-#define INFO(module, ...) LOG_T("[info]    ", module, 3, __VA_ARGS__)
-#define DEBUG(module, ...) LOG_T("[debug]   ", module, 4, __VA_ARGS__)
+#define FATAL(module, ...) LOG_T(RED("[fatal]"), module, 0, __VA_ARGS__)
+#define ERROR(module, ...) LOG_T(RED("[error]"), module, 1, __VA_ARGS__)
+#define WARN(module, ...)  LOG_T(YELLOW("[warn ]"), module, 2, __VA_ARGS__)
+#define INFO(module, ...)  LOG_T("[info ]", module, 3, __VA_ARGS__)
+#define DEBUG(module, ...) LOG_T("[debug]", module, 4, __VA_ARGS__)
 
 
 #endif

@@ -34,6 +34,15 @@ int main()
     INFO(LOG_MODULE_NULL, "gcc patch = %d", __GNUC_PATCHLEVEL__);
     INFO(LOG_MODULE_NULL, "libstdc++ = %d", __GLIBCXX__);
 
+    string test;
+
+    test += "hell";
+    test += " ";
+    test += "hello";
+    test += "o";
+
+    INFO(LOG_MODULE_NULL, "sendVerify : %s\n", test.c_str());
+
     pthread_t section0Pthread;
     if(0 != pthread_create(&section0Pthread, nullptr, section0PthreadFun, nullptr))
     {
