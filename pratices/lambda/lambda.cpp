@@ -3,9 +3,17 @@
 #include <iostream>
 #include <functional>
 
+namespace tt
+{
+    enum MyEnum
+    {
+        W = 1,
+        R = 2
+    };
+}
 
 bool divided7(int x)
-{
+{    
     return (0 == x % 7);
 }
 

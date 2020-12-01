@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 2.6)
+project(cpp_study)
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories("${PROJECT_BINARY_DIR}")
+
+include_directories("${PROJECT_SOURCE_DIR}/pratice0")
+include_directories("${PROJECT_SOURCE_DIR}/pratice1")
+include_directories("${PROJECT_SOURCE_DIR}/lambda")
+add_subdirectory(pratice0)
+add_subdirectory(pratice1)
+add_subdirectory(lambda)
+set(EXTRA_LIBS ${EXTRA_LIBS} pratice0)
+set(EXTRA_LIBS ${EXTRA_LIBS} pratice1)
+set(EXTRA_LIBS ${EXTRA_LIBS} lambda)
