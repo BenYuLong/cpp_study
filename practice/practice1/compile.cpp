@@ -109,7 +109,7 @@ void case3()
 void case4()
 {
     static_assert(sizeof(int) == 4, "int must be 32bit");
-    static_assert(sizeof(long) >= 8, "must run on x64");
+    static_assert(sizeof(long) == 8, "must run on x64");
 }
 
 template<typename T>
@@ -121,9 +121,9 @@ void check_type(T v)
     //static_assert(is_pointer<T>::value, "ptr");
     //static_assert(is_default_constructible<T>::value, "is_default_constructible");
 
-    cout << "static_assert : " << typeid(v).name() << endl;
+    cout << "static_assert : " << typeid(v).name();
 
-    cout << is_void<void>::value << endl;
+    cout << ": " << is_void<void>::value << endl;
 }
 
 void case5()
